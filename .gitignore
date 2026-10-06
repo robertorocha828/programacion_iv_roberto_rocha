@@ -1,0 +1,118 @@
+# ======================================================================
+# OS & IDEs (Aplica a todas las carpetas)
+# ======================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+.idea/
+.vscode/
+*.swp
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# ======================================================================
+# Node.js & Web (React, etc.)
+# ======================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Entornos y builds de Node
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+dist/
+out/
+coverage/
+.next/
+.nuxt/
+
+# ======================================================================
+# React Native
+# ======================================================================
+# Expo
+.expo/
+*.jks
+*.p8
+*.p12
+key.pem
+cert.pem
+
+# Metro / Configuración local
+metro.config.local.js
+
+# ======================================================================
+# Android & Kotlin (Nativo, React Native y Flutter)
+# ======================================================================
+.gradle/
+local.properties
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Archivos de compilación de Android en cualquier subcarpeta
+**/android/build/
+**/android/app/build/
+**/android/.cxx/
+**/android/captures/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# ======================================================================
+# iOS (React Native y Flutter)
+# ======================================================================
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Dependencias y compilación de iOS en cualquier subcarpeta
+**/ios/Pods/
+**/ios/build/
+**/ios/Index/
+**/ios/DerivedData/
+**/ios/.symlinks/
+
+# ======================================================================
+# Dart & Flutter
+# ======================================================================
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+
+# Directorios de compilación generales para Flutter
+build/
+
+# Archivos generados autómaticamente por Flutter (Plugins)
+**/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/flutter_export_environment.sh
+**/windows/flutter/ephemeral/
+**/windows/flutter/generated_plugin_registrant.cc
+**/linux/flutter/ephemeral/
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+**/macos/Flutter/ephemeral/
+
+# Símbolos de crashlytics y otros
+*.crashlytics
