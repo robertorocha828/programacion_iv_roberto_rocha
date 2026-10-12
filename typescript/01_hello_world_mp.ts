@@ -1,0 +1,1 @@
+console.log("Admisiones Instituto Educativo");
