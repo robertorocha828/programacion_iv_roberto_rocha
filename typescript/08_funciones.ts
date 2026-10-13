@@ -51,3 +51,47 @@ console.log(`Fuerza original: ${fuerzaOriginal}, Fuerza potenciada: ${fuerzaPote
 
 const fuerzaPotenciadaFlecha : number = potenciarFuerzaFlecha(fuerzaOriginal);
 console.log(`Fuerza original: ${fuerzaOriginal}, Fuerza potenciada (flecha): ${fuerzaPotenciadaFlecha}`);
+
+// Funciones overloads
+function formatear(valor: number): string;
+function formatear(valor: string): string;
+function formatear(valor: boolean): string;
+
+function formatear(valor: number | string | boolean): string {
+    if (typeof valor === "number") {
+        return valor.toLocaleString("es.MX", {minimumFractionDigits: 2});
+    }
+    if (typeof valor === "boolean") {
+        return valor ? "si" : "no";
+    }
+    return `"${valor}"`;
+    }
+
+console.log(formatear(123456.789));
+console.log(formatear(true));
+console.log(formatear("activo"));
+
+// Closures
+function crearContador(inicio: number = 0){
+    let cuenta = inicio;
+    return{
+        incrementar: () => ++cuenta,
+        decrementar: () => --cuenta,
+        valor: () => cuenta,
+        resetear: () => {cuenta = inicio}
+    }
+}
+
+const c1 = crearContador();
+const c2 = crearContador(20);
+
+c1.incrementar();
+c1.incrementar();
+c1.incrementar();
+c2.incrementar();
+
+console.log(c1.valor());
+console.log(c2.valor());
+
+c1.resetear()
+console.log(c1.valor());;
