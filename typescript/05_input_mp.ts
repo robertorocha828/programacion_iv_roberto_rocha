@@ -6,7 +6,7 @@ if(carreraIngresada === "Desarrollo de Software" || carreraIngresada === "Mecán
     if(!Number.isNaN(edadIngresada) && edadIngresada >= 16 && edadIngresada <= 100) {
         if(!Number.isNaN(puntajeIngresado) && puntajeIngresado > 0 && puntajeIngresado <= 10) {
             console.log(`El aspirante a ${carreraIngresada} tiene ${edadIngresada} años y obtuvo ${puntajeIngresado} sobre 10 en el examen de acceso.`);
-            // Puntaje mínimo de ejemplo, no es una cifra oficial
+         
             if(puntajeIngresado >= 7) {
                 console.log("El aspirante puede continuar con el proceso de matrícula.");
             } else {
