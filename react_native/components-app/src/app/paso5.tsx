@@ -14,7 +14,7 @@ interface ModalConfirmProps {
   onCancelar: () => void
 }
 
-function ModalConfirm({
+export function ModalConfirm({
   visible,
   titulo,
   mensaje,

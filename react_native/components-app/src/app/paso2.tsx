@@ -10,7 +10,7 @@ interface CardProps {
   children: ReactNode
 }
 
-function Card({ titulo, subtitulo, children }: CardProps) {
+export function Card({ titulo, subtitulo, children }: CardProps) {
   return (
     <View style={estilos2.card}>
       <View style={estilos2.cardCabecera}>
