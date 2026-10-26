@@ -7,6 +7,12 @@ import { Paso3 } from './paso3'
 import { Paso4 } from './paso4'
 import { Paso5 } from './paso5'
 import { Paso6 } from './paso6'
+import { Paso1_mp } from './paso1_mp'
+import { Paso2_mp } from './paso2 _mp'
+import { Paso3_mp } from './paso3_mp'
+import { Paso4_mp } from './paso4_mp'
+import { Paso5_mp } from './paso5_mp'
+import { Paso6_mp } from './paso6_mp'
 
 // ┌──────────────────────────────────────────────────────────────────┐
 // │  Cambia este número y guarda (Ctrl+S) para navegar entre pasos. │
@@ -17,7 +23,8 @@ import { Paso6 } from './paso6'
 // │  5  Paso 5  Modal de confirmación                               │
 // │  6  Paso 6  Pantalla completa — detalle de servidor             │
 // └──────────────────────────────────────────────────────────────────┘
-const PASO = 6
+const PASO = 10
+
 
 export default function Index() {
   switch (PASO) {
@@ -35,6 +42,18 @@ export default function Index() {
             return <Paso5/>
     case 6:
             return <Paso6/>
+    case 7:
+            return <Paso1_mp/>
+    case 8:
+            return <Paso2_mp/>
+    case 9:
+            return <Paso3_mp/>
+    case 10:
+            return <Paso4_mp/>
+    case 11:
+            return <Paso5_mp/>
+    case 12:
+            return <Paso6_mp/>
     default:
       return (
         <View style={styles.centrado}>

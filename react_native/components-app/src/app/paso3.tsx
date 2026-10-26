@@ -73,7 +73,7 @@ function FilaServidor({ nombre, ip, estado, latencia, onPress }: FilaServidorPro
   )
 }
 
-export default function Paso3() {
+export  function Paso3() {
   return (
     <View style={estilos3.fondo}>
       <Text style={estilos3.titulo}>Estado de la red</Text>
