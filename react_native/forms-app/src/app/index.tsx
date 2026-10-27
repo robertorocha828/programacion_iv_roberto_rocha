@@ -1,5 +1,11 @@
 // app/index.tsx
 import { Paso1 } from '@/components/paso1'
+import { Paso2 } from '@/components/paso2'
+import { Paso3 } from '@/components/paso3'
+import { Paso4 } from '@/components/paso4'
+import { Paso4Volumen } from '@/components/paso4Volumen'
+import { Paso5 } from '@/components/paso5'
+import { Paso6 } from '@/components/paso6'
 import { StyleSheet, Text, View } from 'react-native'
 
 // ┌──────────────────────────────────────────────────────────────────────┐
@@ -11,7 +17,7 @@ import { StyleSheet, Text, View } from 'react-native'
 // │  5  Formulario con validación — agregar servidor                    │
 // │  6  KeyboardAvoidingView — formulario sin tapado de teclado         │
 // └──────────────────────────────────────────────────────────────────────┘
-const PASO = 1
+const PASO = 6
 
 export default function Index() {
   switch (PASO) {
@@ -24,8 +30,10 @@ export default function Index() {
     case 4:
       return <Paso4 />
     case 5:
-      return <Paso5 />
+      return <Paso4Volumen />
     case 6:
+      return <Paso5 />
+    case 7:
       return <Paso6 />
     default:
       return (
