@@ -1,6 +1,6 @@
 // app/(tabs)/index.tsx
-import { Stack } from 'expo-router'
 import { StyleSheet, Text, View } from 'react-native'
+import { Stack } from 'expo-router'
 
 export default function TabInicio() {
   return (

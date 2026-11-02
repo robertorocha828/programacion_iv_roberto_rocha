@@ -1,26 +1,59 @@
-// app/_layout.tsx — versión actualizada
-import { Stack } from 'expo-router'
+// app/(tabs)/_layout.tsx
+import { Tabs } from 'expo-router'
+import { Text, type TextStyle } from 'react-native'
 
-export default function RootLayout() {
+export default function TabsLayout() {
   return (
-    <Stack
+    <Tabs
       screenOptions={{
-        headerStyle:      { backgroundColor: '#1565c0' },
-        headerTintColor:  '#ffffff',
-        headerTitleStyle: { fontWeight: '700' },
+        tabBarActiveTintColor:   '#1565c0',
+        tabBarInactiveTintColor: '#90a4ae',
+        tabBarStyle:             { backgroundColor: '#ffffff', borderTopColor: '#e0e0e0' },
+        headerStyle:             { backgroundColor: '#1565c0' },
+        headerTintColor:         '#ffffff',
+        headerTitleStyle:        { fontWeight: '700' },
       }}
     >
-      {/* Pantallas normales — no necesitan declaración explícita */}
-      {/* Modal — debe declararse aquí con presentation: 'modal' */}
-      <Stack.Screen
-        name="(modals)/agregar"
+      <Tabs.Screen
+        name="index"
         options={{
-          presentation:  'modal',
-          title:         'Agregar servidor',
-          headerStyle:   { backgroundColor: '#263238' },
-          headerTintColor: '#eceff1',
+          title:        'Inicio',
+          tabBarIcon:   ({ color, size }) => (
+            <TabIcon nombre="inicio" color={color} size={size} />
+          ),
         }}
       />
-    </Stack>
+      <Tabs.Screen
+        name="alertas"
+        options={{
+          title:      'Alertas',
+          tabBarIcon: ({ color, size }) => (
+            <TabIcon nombre="alertas" color={color} size={size} />
+          ),
+          tabBarBadge: 3,   // número de alertas no leídas
+        }}
+      />
+      <Tabs.Screen
+        name="ajustes"
+        options={{
+          title:      'Ajustes',
+          tabBarIcon: ({ color, size }) => (
+            <TabIcon nombre="ajustes" color={color} size={size} />
+          ),
+        }}
+      />
+    </Tabs>
+  )
+}
+
+// Icono simple con texto hasta que se instalen íconos vectoriales
+function TabIcon({ nombre, color, size }: { nombre: string; color: TextStyle['color']; size: number }) {
+  const icono: Record<string, string> = {
+    inicio:   '🖥',
+    alertas:  '🔔',
+    ajustes:  '⚙',
+  }
+  return (
+    <Text style={{ fontSize: size * 0.8, color }}>{icono[nombre]}</Text>
   )
 }

@@ -1,6 +1,6 @@
 // app/(tabs)/alertas.tsx
-import { Stack } from 'expo-router'
 import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { Stack } from 'expo-router'
 
 interface Alerta {
   id:      string

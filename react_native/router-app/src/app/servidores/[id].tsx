@@ -1,6 +1,6 @@
 // app/servidores/[id].tsx
-import { router, Stack, useLocalSearchParams } from 'expo-router'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Stack, useLocalSearchParams, router } from 'expo-router'
 
 interface DetalleServidor {
   nombre:    string
