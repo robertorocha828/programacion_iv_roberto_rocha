@@ -115,4 +115,4 @@ build/
 **/macos/Flutter/ephemeral/
 
 # Símbolos de crashlytics y otros
-*.crashlytics
+*.crashlyticsreact_native/router-app.zip
