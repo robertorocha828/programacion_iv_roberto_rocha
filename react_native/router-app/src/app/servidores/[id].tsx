@@ -101,6 +101,32 @@ export default function DetalleServidor() {
           <FilaDetalle key={p} etiqueta="Puerto" valor={p} />
         ))}
       </View>
+      <View style={styles.bot
+        .onera}>
+        {/* push: apila otra pantalla encima */}
+        <Pressable
+          style={styles.botonAccion}
+          onPress={() => router.push('/servidores/2')}
+        >
+          <Text style={styles.botonAccionTexto}>Ver db-primary (push)</Text>
+        </Pressable>
+
+        {/* replace: reemplaza sin apilar */}
+        <Pressable
+          style={[styles.botonAccion, { backgroundColor: '#37474f' }]}
+          onPress={() => router.replace('/servidores/2')}
+        >
+          <Text style={styles.botonAccionTexto}>Ir a db-primary (replace)</Text>
+        </Pressable>
+
+        {/* back: vuelve al paso anterior */}
+        <Pressable
+          style={[styles.botonAccion, { backgroundColor: '#c62828' }]}
+          onPress={() => router.back()}
+        >
+          <Text style={styles.botonAccionTexto}>Volver (back)</Text>
+        </Pressable>
+      </View>
     </ScrollView>
   )
 }
